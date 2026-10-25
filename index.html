@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonttien lataus -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,9 +19,9 @@
     <header class="header">
         <!-- Sivun otsikko -->
         <h1>Portfolio</h1>
-        <p>Tervetuloa sivuilleni</p>
+        <p>Uuden äärellä, rivi koodia kerrallaan</p>
 
-        <!-- Tähän tulee navigaatio linkit/painikkeet -->
+        <!-- Navigaatio linkit/painikkeet -->
         <nav class="navigation">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
@@ -26,20 +33,28 @@
 
     <main class="container">
 
-        <!-- Tähän tulee hero osio -->
-        <article class="hero">
-            <h2>Sairaanhoitajasta IT-alan osaajaksi</h2>
-            <p>
-                Olen Jaakko Kivioja, tieto- ja viestintätekniikan opiskelija
-                Centria-ammattikorkeakoulusta. Kehitän aktiivisesti osaamistani
-                ohjelmoinnin, IT-järjestelmien ja turvallisuusteknologian parissa.
-                Tavoitteenani on yhdistää tekninen osaaminen, käytännön ongelmanratkaisu
-                ja käyttäjälähtöinen ajattelu toimiviksi ratkaisuiksi.
-            </p>
-        </article>
+        <!-- Hero osio -->
 
-        <!-- Tähän tulee about osio -->
-        <article class="about">
+        <section class="hero-section">
+            <article class="card">
+                <h2>Sairaanhoitajasta IT-alan osaajaksi</h2>
+                <p>
+                    Olen Jaakko Kivioja, tieto- ja viestintätekniikan opiskelija
+                    Centria-ammattikorkeakoulusta. Kehitän aktiivisesti osaamistani
+                    ohjelmoinnin, IT-järjestelmien ja turvallisuusteknologian parissa.
+                    Tavoitteenani on yhdistää tekninen osaaminen, käytännön ongelmanratkaisu
+                    ja käyttäjälähtöinen ajattelu toimiviksi ratkaisuiksi.
+                </p>
+            </article>
+
+            <!-- Hero image, VAIHDA KUVA - TÄMÄ VAIN PLACEHOLDER -->
+            <picture class="hero-image">
+                <img class="image" src="pictures/idea.jpg" alt="Kuva hehkulampusta" />
+            </picture>
+        </section>
+
+        <!-- About osio -->
+        <article class="card about">
             <h2>About me</h2>
             <p>
                 Opiskelen tieto- ja viestintätekniikkaa Centria-ammattikorkeakoulussa
@@ -71,6 +86,7 @@
     </main>
 
     <footer class="footer">
+        <!-- Lisää linkedin/somelinkit? -->
         <p>&copy; 2026 Jaakko Kivioja</p>
     </footer>
 

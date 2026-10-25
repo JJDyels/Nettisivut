@@ -8,21 +8,26 @@ Teksti: #F8FAFC
 Harmaa: #94A3B8
 */
 
-/* PERUSASETUKSET */
+/*****************************************************************
+PERUSASETUKSET KAIKILLE SIVUILLE
+ ******************************************************************/
 
 * {
     box-sizing: border-box;
-    margin: 2px;
+    margin: 0;
     padding: 0;
 }
 
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     background-color: #0F172A;
     color: #F8FAFC;
 }
 
-/* HEADER */
+/*****************************************************************
+ HEADER KAIKILLE SIVUILLE
+ ******************************************************************/
 
 .header {
     background-color: #111827;
@@ -32,29 +37,40 @@ body {
 }
 
 .navigation ul {
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 0px;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
 
 .navigation a {
+    display: block;
     text-decoration: none;
     color: #F8FAFC;
     font-weight: bold;
+    padding: 15px 20px;
 }
 
-.navigation a:hover {
-    color:#6c0cb9;
+
+.navigation a:hover,
+.navigation a:focus {
+    color: #6c0cb9;
 }
 
-/* MAIN */
+/*****************************************************************
+ MAIN KAIKILLE SIVUILLE
+ ******************************************************************/
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
 }
 
 .container article {
@@ -72,22 +88,73 @@ body {
     margin-bottom: 20px;
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.image {
+    height: 100%;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.card {
     background-color: #1E293B;
     padding: 20px;
     border-radius: 8px;
     border-left: 4px solid #6c0cb9;
 }
 
+/* MAIN INDEX.HTML*/
+.hero-section {
+    grid-column: 1 / -1; /* sama kuin 1 / 3 */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
 .about {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    grid-column: 1 / -1; /* sama kuin 1 / 3 */
+}
+
+/* MAIN PROJEKTS.HTML */
+
+.project {
+    grid-column: 1 / -1;  /* sama kuin 1 / 3 */
     background-color: #1E293B;
     padding: 20px;
     border-radius: 8px;
-    border-left: 4px solid #6c0cb9;
+}
+
+.project-section {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* MAIN CONTACT.HTML */
+
+/* YHTEISET GRID ASETUKSET */
+
+.card, .hero-image, .project-image {
+    height: 100%;
+}
+
+/*****************************************************************
+ FOOTER KAIKILLE SIVUILLE
+ ******************************************************************/
+
+footer {
+    background-color: #111827;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #1E293B;
 }
