@@ -12,6 +12,7 @@
 
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="pictures/icon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -47,15 +48,30 @@
         <section class="project-section">
 
             <article class="card">
-                <h2>Esimerkki projekti 1</h2>
+                <h2>Linux farmi</h2>
                 <p>
-                    tekstiä
+                    Tässä projektissa toteutin Oracle VM -ympäristöön Linux-pohjaisen palvelininfrastruktuurin,
+                    joka koostui yhdestä Debian Desktop -työasemasta, yhdestä Debian Server -palvelimesta sekä yhdestä
+                    Alpine Linux -palvelimesta. Projektin tavoitteena oli rakentaa turvallinen etähallintaympäristö,
+                    jossa Debian Desktop toimi hallintakoneena ja palvelimia hallittiin SSH-yhteyksien kautta.
+                </p>
+                <p>
+                    Ympäristöön määritettiin normaalikäyttäjille sudo-oikeudet, poistettiin SSH-salasanakirjautuminen
+                    käytöstä ja otettiin käyttöön Microsoft Authenticatoriin perustuva monivaiheinen tunnistautuminen
+                    (MFA). Lisäksi palvelimien tietoturvaa vahvistettiin Fail2ban-ratkaisulla, joka suojaa palvelimia
+                    rajoittamalla toistuvia kirjautumisyrityksiä.
                 </p>
             </article>
 
             <!-- Tähän tulee projekti1 image -->
+
             <picture class="project-image">
-                <img class="image" src="pictures/Comin soon 1920x1920.jpg" alt="kuvassa tulossa pian teksti" />
+                <source type="image/avif" srcset="pictures/Linuxfarm_1536.avif 1536w" sizes="100vw">
+
+                <source type="image/webp" srcset="pictures/Linux_farmi-1536.webp 1536w" sizes="100vw">
+
+                <img class="image" src="pictures/Linux_farmi-1536.jpg" alt="Linux-pingviinit ylläpitämässä maatilaa"
+                    width="1536" height="1024" fetchpriority="high">
             </picture>
 
         </section>
@@ -65,15 +81,42 @@
             <article class="card">
                 <h2>Esimerkki projekti 2</h2>
                 <p>
-                    tekstiä
+                    Tässä projektissa suunnittelin ja toteutin PostgreSQL-tietokannan yksinkertaista verkkokauppaa
+                    varten. Tietokanta koostuu kuudesta taulusta: customers, products, orders, orderitems, shoppingcart
+                    ja cartitems, joiden avulla voidaan hallita asiakastietoja, tuotteita, varastosaldoja, ostoskoreja
+                    sekä toteutuneita tilauksia.
+                </p>
+                <p>
+
+                    Projektin aikana toteutin erilaisia SQL-kyselyitä ja raportteja, kuten ostoskorien sisältöjen
+                    tarkastelua, tilausmääriä, myydyimpien tuotteiden seurantaa sekä aikaväleihin perustuvia raportteja.
+                    Yksi mielenkiintoisimmista ominaisuuksista oli trigger-funktio, joka päivittää automaattisesti
+                    tilausten kokonaishinnan (total_price) aina, kun tilausrivejä lisätään, muokataan tai poistetaan.
+                </p>
+                <p>
+                    Vaikka tietokanta on tarkoituksella yksinkertainen ja suunniteltu SQL-perusteiden harjoitteluun,
+                    projekti tarjosi käytännön kokemusta relaatiotietokantojen suunnittelusta, SQL-kyselyistä,
+                    triggerien hyödyntämisestä sekä tietokannan rakenteen kehittämisestä tulevia laajennuksia varten.
                 </p>
             </article>
 
             <!-- Tähän tulee projekti2 image -->
             <picture class="project-image">
-                <img class="image" src="pictures/Comin soon 1920x1920.jpg" alt="kuvassa tulossa pian teksti" />
+                <source type="image/avif" srcset="pictures/SQL_1536.avif 1536w" sizes="100vw">
+
+                <source type="image/webp" srcset="pictures/SQL_1536.webp 1536w" sizes="100vw">
+
+                <img class="image" src="pictures/SQL_1536.jpg" alt="SQL-tietokannat" width="1536" height="1024"
+                    fetchpriority="low">
             </picture>
 
+        </section>
+
+        <section class="project">
+            <video controls preload="metadata" poster="pictures/Comin soon 1920x1920.jpg" width="640" height="480"
+                autoplay loop>
+                <source src="media/aallot.mp4" type="video/mp4">
+            </video>
         </section>
 
     </main>

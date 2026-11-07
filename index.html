@@ -13,6 +13,7 @@
 
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="pictures/icon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -48,8 +49,13 @@
             </article>
 
             <!-- Hero image, VAIHDA KUVA - TÄMÄ VAIN PLACEHOLDER -->
-            <picture class="hero-image">
-                <img class="image" src="pictures/idea.jpg" alt="Kuva hehkulampusta" />
+            <picture class="project-image">
+                <source type="image/avif" srcset="pictures/Työpiste_1536.avif 1536w" sizes="100vw">
+
+                <source type="image/webp" srcset="pictures/Työpiste_1536.webp 1536w" sizes="100vw">
+
+                <img class="image" src="pictures/Työpiste_1536.jpg" alt="Kuva työpisteestä" width="1536" height="1024"
+                    fetchpriority="high">
             </picture>
         </section>
 
