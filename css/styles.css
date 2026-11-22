@@ -179,7 +179,7 @@ form {
 fieldset {
     border: 2px solid #6c0cb9;
     border-radius: 6px;
-    padding: 16px ;
+    padding: 16px;
 }
 
 .kentta {
@@ -195,7 +195,9 @@ fieldset {
 }
 
 /* Korostetaan punaisella, jos käyttäjä ei ole syöttänyt pakollista tietoa lomakkeeseen */
-input:user-invalid, select:user-invalid, textarea:user-invalid {
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
     border: 2px solid red;
 
 }
@@ -217,6 +219,7 @@ textarea {
     gap: 10px;
     margin-top: 10px;
 }
+
 button {
     padding: 10px 14px;
     background-color: #6c0cb9;
@@ -225,6 +228,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #862ad6;
     font-weight: bold;
@@ -235,6 +239,7 @@ button:hover {
     color: blue;
     border: 1px solid #6c0cb9;
 }
+
 .tyhjenna:hover {
     background-color: #862ad6;
     color: white;
@@ -258,6 +263,7 @@ caption {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 table {
     width: 100%;
     border: 1px solid #6c0cb9;
@@ -268,7 +274,8 @@ thead {
     background-color: #0e131b;
 }
 
-th, td{
+th,
+td {
     border: 2px solid #6c0cb9;
     padding: 10px;
     text-align: left;
@@ -277,10 +284,12 @@ th, td{
 tbody tr:nth-child(even) {
     background-color: #1c1f24;
 }
+
 tfoot {
     background-color: #0e131b;
 }
 
+/* Progress elementti näyttää edistymisen prosentteina */
 progress {
     width: 100%;
     height: 20px;
