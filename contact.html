@@ -33,26 +33,102 @@
 
     <main class="container">
 
-        <!-- Tähän tulee yhteystiedot -->
-
-        <article class="card">
-            <h2>Yhteystiedot</h2>
-            <p>
-                Oletko kiinnostunut yhteistyöstä? Ota yhteyttä!
-            </p>
-        </article>
-
-
         <!-- Tähän tulee yhteydenottolomake -->
         <article class="card">
             <h2>Yhteydenotto</h2>
             <p>
-                Ota yhteyttä täyttämällä alla oleva lomake.
+                Ota yhteyttä täyttämällä lomake. Jos haluat kysyä opinnoistani, projekteistani tai vain jättää
+                terveiset, viestisi on tervetullut.
             </p>
         </article>
 
+        <!-- Yhteydenottolomake käyttää API avainta ja redirect-asetusta -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="bcd186c5-a783-4ebc-85fb-dda2636b3e60">
+            <input type="hidden" name="subject" value="Uusi yhteydenotto portfoliosivulta">
+            <input type="checkbox" name="botcheck" style="display:none;">
+            <input type="hidden" name="redirect" value="https://jaakkokivioja.github.io/portfolio/kiitos.html">
 
+            <fieldset>
+                <legend>Yhteystiedot</legend>
 
+                <p>Tähdellä (*) merkitys kentät ovat pakollisia</p>
+
+                <div class="kentta">
+                    <label for="nimi">Koko nimi <span class="pakollinen">*</span></label>
+                    <input type="text" id="nimi" name="kokonimi" placeholder="Etunimi Sukunimi" autocomplete="name"
+                        maxlength="100" required>
+                </div>
+
+                <div class="kentta">
+                    <label for="sposti">Sähköposti <span class="pakollinen">*</span></label>
+                    <input type="email" id="sposti" name="sposti" placeholder="etunimi.sukunimi@domain.com"
+                        autocomplete="email" maxlength="100" required>
+                </div>
+
+                <div class="kentta">
+                    <label for="puh">Puhelin</label>
+                    <input type="tel" id="puh" name="puh" placeholder="+35840123456" autocomplete="puh">
+                </div>
+
+                <div class="kentta">
+                    <label for="viesti">Viesti</label>
+                    <textarea name="viesti" id="viesti" rows="4" placeholder="Kirjoita viestisi ..."></textarea>
+                </div>
+
+                <div class="painikkeet">
+                    <button type="submit">Lähetä</button>
+                    <button type="reset" class="tyhjenna">Tyhjennä</button>
+                </div>
+
+            </fieldset>
+        </form>
+
+        <div class="table-container , card">
+            <section>
+                <h2>Opintojen edistyminen</h2>
+                <table>
+                    <caption>Tämänhetkinen tilanne</caption>
+                    <thead>
+                        <tr>
+                            <th>Vaihe</th>
+                            <th>Tilanne</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Ensimmäinen vuosi</th>
+                            <td>Done</td>
+                        </tr>
+
+                        <tr>
+                            <th>Toinen vuosi</th>
+                            <td>In progress</td>
+                        </tr>
+
+                        <tr>
+                            <th>Kolmas vuosi</th>
+                            <td>Not started</td>
+                        </tr>
+
+                        <tr>
+                            <th>Neljäs vuosi</th>
+                            <td>Not started</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <label for="opinnot-progress">Edistyminen: 30 %</label>
+                                <progress id="opinnot-progress" value="30" max="100">30%</progress>
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </section>
 
     </main>
 
