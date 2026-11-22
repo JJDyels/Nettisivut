@@ -306,6 +306,10 @@ progress::-webkit-progress-value {
 /* näytetään gridit yhdellä sarakkeella, jos selainikkuna on kapeampi kuin 1000px */
 @media (max-width: 1000px) {
 
+    .header {
+        position: static;
+    }
+
     .container,
     .hero-section,
     .project-section {
